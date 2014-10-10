@@ -172,8 +172,7 @@ for para in parafile:
     outdata[j]['mode']= 'N'
     outdata[j]['mode_no']= 0
     print('Reading.. CIGS-EF-Ga-p3-%dnm-Ex'%(wl))
-    df = np.genfromtxt('data\CIGS-EF-Ga-p3-%dnm-Ex.txt'%(wl),delimiter='\t',skip_header=955,invalid_raise=False) #DELETED THE GLASS REGION
-    
+    df = np.genfromtxt('data/CIGS-EF-Ga-p3-%dnm-Ex.txt'%(wl),delimiter='\t',skip_header=955,invalid_raise=False) #DELETED THE GLASS REGION
     #exciton generation rate-total###################################
     i=0
     for field in df:
@@ -212,7 +211,7 @@ for para in parafile:
 
     pos,val=get_internal(outdata[j]['active_gen_rate'])
     slegend1=np.append(slegend1,'%d,NORMAL'%(wl),axis=None)
-    p.plot(normalizepos(pos),val,(linetype[ln,0])) 
+    #p.plot(normalizepos(pos),val,(linetype[ln,0]))
 
 
     #statistical analysis of the generation profile####################
