@@ -262,7 +262,7 @@ for para in parafile:
      
     ln=ln+1 #forplotcolor
      
-       
+
 #format legend for 'generation_rate'
 leg1=p.legend(slegend1, 'upper right', shadow=True)
 for t in leg1.get_texts():
