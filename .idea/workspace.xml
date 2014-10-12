@@ -2,93 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d061d0c5-24bf-4f22-a674-40f59d34810a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1000_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1010_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1020_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1030_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1040_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1050_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1060_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1070_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1080_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1090_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1100_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/300_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/310_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/320_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/340_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/350_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/360_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/370_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/380_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/390_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/400_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/420_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/430_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/440_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/450_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/460_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/470_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/480_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/490_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/500_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/510_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/520_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/530_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/540_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/550_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/560_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/570_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/580_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/590_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/600_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/610_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/620_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/630_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/640_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/650_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/660_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/670_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/680_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/690_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/700_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/710_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/720_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/730_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/740_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/750_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/760_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/770_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/780_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/790_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/800_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/810_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/820_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/830_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/840_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/850_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/860_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/870_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/880_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/890_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/900_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/910_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/920_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/930_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/940_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/950_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/960_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/970_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/980_NORMAL_PDF.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/990_NORMAL_PDF.dat" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/410_NORMAL_PDF.dat" afterPath="$PROJECT_DIR$/pdf/410_NORMAL_PDF.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EFTOPDF.iml" afterPath="$PROJECT_DIR$/.idea/EFTOPDF.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NORMAL-efield_analysis_matt.py" afterPath="$PROJECT_DIR$/NORMAL-efield_analysis_matt.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EFTOPDF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,7 +14,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/EFTOPDF$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1413072680999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EFTOPDF$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1413146264830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -117,8 +31,8 @@
       <file leaf-file-name="run.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46770602" vertical-offset="60" max-vertical-offset="675">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="564" max-vertical-offset="1050">
+              <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -179,7 +93,7 @@
       <file leaf-file-name="wavelength_normal.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wavelength_normal.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="727" max-vertical-offset="1290">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
               <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
               <folding />
             </state>
@@ -189,8 +103,8 @@
       <file leaf-file-name="NORMAL-efield_analysis_matt.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NORMAL-efield_analysis_matt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.846154" vertical-offset="685" max-vertical-offset="4230">
-              <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+            <state vertical-scroll-proportion="-6.923077" vertical-offset="2415" max-vertical-offset="4230">
+              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="49" />
               <folding>
                 <element signature="e#109#127#0" expanded="true" />
               </folding>
@@ -257,8 +171,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="821" />
-    <option name="y" value="528" />
+    <option name="x" value="1062" />
+    <option name="y" value="434" />
     <option name="width" value="1255" />
     <option name="height" value="798" />
   </component>
@@ -304,20 +218,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="EFTOPDF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EFTOPDF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EFTOPDF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pdf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -562,19 +462,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="821" y="528" width="1255" height="798" extended-state="0" />
+    <frame x="1062" y="434" width="1255" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31550068" sideWeight="0.49880478" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31444758" sideWeight="0.49876338" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.4995878" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20939818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917696" sideWeight="0.4996016" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2917847" sideWeight="0.5012366" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2917847" sideWeight="0.49876338" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2917847" sideWeight="0.5012366" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2917847" sideWeight="0.49876338" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.4996968" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -607,7 +507,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -714,14 +614,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wavelength_normal.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="727" max-vertical-offset="1290">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pdf/470_NORMAL_PDF.dat">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="44280">
@@ -768,18 +660,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NORMAL-efield_analysis_matt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.846154" vertical-offset="685" max-vertical-offset="4230">
-          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        <state vertical-scroll-proportion="-6.923077" vertical-offset="2415" max-vertical-offset="4230">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="49" />
           <folding>
             <element signature="e#109#127#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wavelength_normal.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="727" max-vertical-offset="1290">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46770602" vertical-offset="60" max-vertical-offset="675">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="564" max-vertical-offset="1050">
+          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
           <folding />
         </state>
       </provider>

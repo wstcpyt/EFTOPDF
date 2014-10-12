@@ -9,32 +9,57 @@ def collectionfunction(z):
     denominator= np.cosh((zmo-350.0)/leff)/leff+smooverd*np.sinh((zmo-350.0)/leff)
     iqevalue=numerator/denominator
     return iqevalue
-#n=82 for pdf
+#n=81 for pdf
 cc =  np.array([])
 for z in range(0,2300):
     if z < 351:
         cc = np.append(cc,0.9)
     else:
         cc = np.append(cc,collectionfunction(z))
-file = open('pdf/900_NORMAL_PDF.dat')
-gf = np.array([])
-gffoward = np.array([])
-for line in file:
-    gffoward = np.append(gffoward,float(line.split()[1]))
-gfreversed = gffoward[::-1]
-i=0
-for g in gfreversed:
-    if i>315 and i<2616:
-        gf = np.append(gf,g)
-    i = i+1
-sum = np.dot(gf,cc)
 
-print(sum/2300)
+# calculate iqe vs waveklength
+wavelengthfile = open('wavelength_normal.txt')
+wl = np.array([])
+for line in wavelengthfile:
+    wl = np.append(wl,float(line))
+iqewl = np.array([])
+for wlobject in wl:
+    file = open('pdf/%d_NORMAL_PDF.dat'%(wlobject))
+    gf = np.array([])
+    gffoward = np.array([])
+    for line in file:
+        gffoward = np.append(gffoward,float(line.split()[1]))
+    gfreversed = gffoward[::-1]
+    i=0
+    for g in gfreversed:
+        if i>315 and i<2616:
+            gf = np.append(gf,g)
+        i = i+1
+    iqewl = np.append(iqewl,np.dot(gf,cc)/2300)
+print(iqewl)
+n = 81
+s = (n,n)
+#calculate the matrix
+AM = np.zeros(s)
+for i in range(0,n):
+    search = open('pdf/%d_NORMAL_PDF.dat'%(wl[i]))
+    modcount = 0
+    AMarray = np.array([])
+    for line in search:
+        if modcount % 27 == 0:
+            if modcount > 315 and modcount<2516:
+                AMarray = np.append(AMarray,float(line.split()[1]))
+        modcount = modcount +1
+    for j in range(0,n):
+        AM[i,j] = AMarray[j]
+
+#print('Reading.. CIGS-EF-Ga-p3-%dnm-Ex'%(wl))
+
 
 from pylab import *
-x= np.arange(0,2300)
+x= np.arange(0,81)
 ax1 = subplot(111)
-ax1.scatter(x,gf,marker='o',label='tkhonov',color='black')
+ax1.scatter(x,iqewl,marker='o',label='tkhonov',color='black')
 
 
 show()
