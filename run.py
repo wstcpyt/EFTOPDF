@@ -1,5 +1,6 @@
 __author__ = 'yutongpang'
 import numpy as np
+from SVD import SVD
 iqescr=0.9
 zmo=2300
 leff=920.0
@@ -43,23 +44,37 @@ s = (n,n)
 AM = np.zeros(s)
 for i in range(0,n):
     search = open('pdf/%d_NORMAL_PDF.dat'%(wl[i]))
-    modcount = 0
     AMarray = np.array([])
+    AMfoward = np.array([])
     for line in search:
-        if modcount % 27 == 0:
-            if modcount > 315 and modcount<2516:
-                AMarray = np.append(AMarray,float(line.split()[1]))
-        modcount = modcount +1
+        AMfoward = np.append(AMfoward,float(line.split()[1]))
+    AMreversed = AMfoward[::-1]
+    modcount = 0
+    for object in AMreversed:
+        if modcount % 28 == 0:
+            if modcount > 315 and modcount<2616:
+                AMarray = np.append(AMarray,object)
+        modcount = modcount + 1
     for j in range(0,n):
-        AM[i,j] = AMarray[j]
-
-#print('Reading.. CIGS-EF-Ga-p3-%dnm-Ex'%(wl))
+        #AMarray = AMarray[::-1]
+        AM[i,j] = AMarray[j]/n
+#TSVD method
+svdclass=SVD(n)
+g = iqewl
+f_tsvd = svdclass.f_tsvd(7,AM,g.T)
+f_tikhonov =svdclass.f_tikhonov(0.01,AM,g.T)
+utb, utbs=svdclass.picardparameter(AM,g.T)
 
 
 from pylab import *
 x= np.arange(0,81)
+
 ax1 = subplot(111)
-ax1.scatter(x,iqewl,marker='o',label='tkhonov',color='black')
+#ax1.set_yscale('log')
+#ax.set_xscale('log')
+ax1.scatter(x,f_tikhonov,marker='o',label='tkhonov',color='black')
+ccx = np.arange(0,2300)
+ax1.scatter(ccx/2300.0*81,cc,marker='o',label='tkhonov',color='red')
 
 
 show()
