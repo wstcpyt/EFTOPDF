@@ -58,11 +58,14 @@ for i in range(0,n):
     for j in range(0,n):
         #AMarray = AMarray[::-1]
         AM[i,j] = AMarray[j]/n
+
+noise = np.random.normal(0,1,(n,n))
+AM = AM +noise/1000
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(7,AM,g.T)
-f_tikhonov =svdclass.f_tikhonov(0.01,AM,g.T)
+f_tsvd = svdclass.f_tsvd(8,AM,g.T)
+f_tikhonov =svdclass.f_tikhonov(0.3,AM,g.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
 
 
@@ -72,7 +75,8 @@ x= np.arange(0,81)
 ax1 = subplot(111)
 #ax1.set_yscale('log')
 #ax.set_xscale('log')
-ax1.scatter(x,f_tikhonov,marker='o',label='tkhonov',color='black')
+#ax1.scatter(x,f_tikhonov,marker='o',label='tkhonov',color='black')
+ax1.scatter(x,f_tsvd,marker='o',label='tkhonov',color='green')
 ccx = np.arange(0,2300)
 ax1.scatter(ccx/2300.0*81,cc,marker='o',label='tkhonov',color='red')
 
