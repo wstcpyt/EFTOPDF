@@ -20,7 +20,7 @@ for z in range(0,2300):
         cc = np.append(cc,collectionfunction(z))
 
 # calculate iqe vs waveklength
-wavelengthfile = open('wavelengthtest.txt')
+wavelengthfile = open('wavelength_normal.txt')
 wl = np.array([])
 for line in wavelengthfile:
     wl = np.append(wl,float(line))
@@ -39,7 +39,7 @@ for wlobject in wl:
         i = i+1
     iqewl = np.append(iqewl,np.dot(gf,cc)/2300)
 print(iqewl)
-n = 40
+n = 81
 s = (n,n)
 #calculate the matrix
 AM = np.zeros(s)
@@ -52,7 +52,7 @@ for i in range(0,n):
     AMreversed = AMfoward[::-1]
     modcount = 0
     for object in AMreversed:
-        if modcount % 57 == 0:
+        if modcount % 28 == 0:
             if modcount > 315 and modcount<2616:
                 AMarray = np.append(AMarray,object)
         modcount = modcount + 1
@@ -65,13 +65,13 @@ noise = np.random.normal(0,1,(n,n))
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(10,AM,g.T)
+f_tsvd = svdclass.f_tsvd(4,AM,g.T)
 f_tikhonov =svdclass.f_tikhonov(0.08,AM,g.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
 
 
 from pylab import *
-x= np.arange(0,40)
+x= np.arange(0,81)
 
 ax1 = subplot(111)
 #ax1.set_yscale('log')
@@ -79,19 +79,19 @@ ax1 = subplot(111)
 ax1.scatter(x,f_tsvd,marker='o',label='tkhonov',color='black')
 #ax1.scatter(x,f_tsvd,marker='o',label='tkhonov',color='green')
 ccx = np.arange(0,2300)
-ax1.scatter(ccx/2300.0*40,cc,marker='o',label='tkhonov',color='red')
+ax1.scatter(ccx/2300.0*81,cc,marker='o',label='tkhonov',color='red')
 
 #smoothcurce
 import scipy
 from scipy.interpolate import interp1d
 from scipy import signal
 f2 = interp1d(x, f_tsvd)
-xx = np.linspace(0,39, 100)
+xx = np.linspace(0,80, 100)
 yy = f2(xx)
 # make a gaussian window
 window = signal.gaussian(7, 20)
 smoothed = signal.convolve(yy, window/window.sum(), mode='same')
-#plt.plot(xx,smoothed)
+plt.plot(xx,smoothed)
 
 
 show()
