@@ -76,8 +76,8 @@ noise = np.random.normal(0,1,(n,n))
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(3,AM,iqeyy.T)
-f_tikhonov =svdclass.f_tikhonov(0.1,AM,iqeyy.T)
+f_tsvd = svdclass.f_tsvd(2,AM,iqeyy.T)
+f_tikhonov =svdclass.f_tikhonov(0.05,AM,iqeyy.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
 
 
@@ -87,14 +87,14 @@ x= np.arange(0,81)
 ax1 = subplot(111)
 #ax1.set_yscale('log')
 #ax.set_xscale('log')
-ax1.scatter (x,f_tikhonov,marker='o',label='tkhonov',color='black')
+ax1.scatter (x,f_tsvd,marker='o',label='tkhonov',color='black')
 #ax1.scatter (x,iqeyy,marker='o',label='tkhonov',color='red')
 #ax1.scatter(x,f_tsvd,marker='o',label='tkhonov',color='green')
 ccx = np.arange(0,2300)
 ax1.plot(ccx/2300.0*81,cc,label='tkhonov',color='red')
 
 #smoothcurce
-f2 = interp1d(x, f_tikhonov)
+f2 = interp1d(x, f_tsvd)
 xx = np.linspace(0,80, 100)
 yy = f2(xx)
 # make a gaussian window
