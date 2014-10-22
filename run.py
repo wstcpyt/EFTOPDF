@@ -47,7 +47,6 @@ g=g/100
 xiqeextended = np.array([300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100])
 fiqe = interp1d(xiqeextended, g,kind='cubic')
 iqexx = np.linspace(300,1100, 81)
-print(iqexx)
 iqeyy = fiqe(iqexx)
 
 n = 81
@@ -76,8 +75,8 @@ noise = np.random.normal(0,1,(n,n))
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(2,AM,iqeyy.T)
-f_tikhonov =svdclass.f_tikhonov(0.05,AM,iqeyy.T)
+f_tsvd = svdclass.f_tsvd(7,AM,g.T)
+f_tikhonov =svdclass.f_tikhonov(0.05,AM,g.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
 
 
@@ -87,20 +86,24 @@ x= np.arange(0,81)
 ax1 = subplot(111)
 #ax1.set_yscale('log')
 #ax.set_xscale('log')
-ax1.scatter (x,f_tsvd,marker='o',label='tkhonov',color='black')
+ax1.scatter (x/81.0,f_tsvd,marker='o',label='TSVD Regularization',color='black')
 #ax1.scatter (x,iqeyy,marker='o',label='tkhonov',color='red')
 #ax1.scatter(x,f_tsvd,marker='o',label='tkhonov',color='green')
 ccx = np.arange(0,2300)
-ax1.plot(ccx/2300.0*81,cc,label='tkhonov',color='red')
+ax1.plot(ccx/2300.0,cc,label='Exact profiles',color='red',linewidth=3.0)
 
 #smoothcurce
 f2 = interp1d(x, f_tsvd)
 xx = np.linspace(0,80, 100)
 yy = f2(xx)
 # make a gaussian window
-window = signal.gaussian(7, 20)
+window = signal.gaussian(10, 20)
 smoothed = signal.convolve(yy, window/window.sum(), mode='same')
-plt.plot(xx,smoothed)
-
-
+plt.plot(xx/80,smoothed,linewidth=3.0,label='Gaussian smooth')
+ax1.set_ylim(-0.1,1.7)
+ax1.set_xlabel('Normalize position in CIGS layer',fontsize=15)
+ax1.set_ylabel('Charge collection probability',fontsize=15)
+ax1.xaxis.set_tick_params(labelsize=15)
+ax1.yaxis.set_tick_params(labelsize=15)
+legend = ax1.legend(loc='upper right', shadow=True,prop={'size':15})
 show()
