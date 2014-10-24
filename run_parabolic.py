@@ -1,4 +1,3 @@
-__author__ = 'yutongpang'
 import numpy as np
 from scipy.interpolate import interp1d
 from scipy import signal
@@ -9,17 +8,12 @@ zmo=2300
 leff=920.0
 smooverd=4.3e-4
 def collectionfunction(z):
-    numerator= iqescr*((np.cosh((z-zmo)/leff))/leff-smooverd*np.sinh((z-zmo)/leff))
-    denominator= np.cosh((zmo-350.0)/leff)/leff+smooverd*np.sinh((zmo-350.0)/leff)
-    iqevalue=numerator/denominator
-    return iqevalue
+    f = (-(1150.0-z)**2+1150.0**2)/(1150.0**2)
+    return f
 #n=81 for pdf
 cc =  np.array([])
 for z in range(0,2300):
-    if z < 351:
-        cc = np.append(cc,1)
-    else:
-        cc = np.append(cc,collectionfunction(z))
+    cc = np.append(cc,collectionfunction(z))
 
 # calculate iqe vs waveklength
 wavelengthfile = open('wavelength_normal.txt')
@@ -75,7 +69,7 @@ noise = np.random.normal(0,1,(n,n))
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(7,AM,g.T)
+f_tsvd = svdclass.f_tsvd(11,AM,g.T)
 f_tikhonov =svdclass.f_tikhonov(0.05,AM,g.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
 

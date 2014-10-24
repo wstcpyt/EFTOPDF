@@ -9,17 +9,12 @@ zmo=2300
 leff=920.0
 smooverd=4.3e-4
 def collectionfunction(z):
-    numerator= iqescr*((np.cosh((z-zmo)/leff))/leff-smooverd*np.sinh((z-zmo)/leff))
-    denominator= np.cosh((zmo-350.0)/leff)/leff+smooverd*np.sinh((zmo-350.0)/leff)
-    iqevalue=numerator/denominator
-    return iqevalue
+    f = (2300.0-z)/2300.0
+    return f
 #n=81 for pdf
 cc =  np.array([])
 for z in range(0,2300):
-    if z < 351:
-        cc = np.append(cc,1)
-    else:
-        cc = np.append(cc,collectionfunction(z))
+    cc = np.append(cc,collectionfunction(z))
 
 # calculate iqe vs waveklength
 wavelengthfile = open('wavelength_normal.txt')
