@@ -1,4 +1,3 @@
-__author__ = 'yutongpang'
 import numpy as np
 from scipy.interpolate import interp1d
 from scipy import signal
@@ -9,17 +8,12 @@ zmo=2300
 leff=920.0
 smooverd=4.3e-4
 def collectionfunction(z):
-    numerator= iqescr*((np.cosh((z-zmo)/leff))/leff-smooverd*np.sinh((z-zmo)/leff))
-    denominator= np.cosh((zmo-350.0)/leff)/leff+smooverd*np.sinh((zmo-350.0)/leff)
-    iqevalue=numerator/denominator
-    return iqevalue
+    f = (-(1150.0-z)**2+1150.0**2)/(1150.0**2)
+    return f
 #n=81 for pdf
 cc =  np.array([])
 for z in range(0,2300):
-    if z < 351:
-        cc = np.append(cc,1)
-    else:
-        cc = np.append(cc,collectionfunction(z))
+    cc = np.append(cc,collectionfunction(z))
 
 # calculate iqe vs waveklength
 wavelengthfile = open('wavelength_normal.txt')
@@ -55,7 +49,6 @@ s = (n,n)
 AM = np.zeros(s)
 for i in range(0,n):
     search = open('pdf/%d_NORMAL_PDF.dat'%(wl[i]))
-    rawAMarray = np.array([])
     AMarray = np.array([])
     AMfoward = np.array([])
     for line in search:
@@ -63,22 +56,14 @@ for i in range(0,n):
     AMreversed = AMfoward[::-1]
     modcount = 0
     for object in AMreversed:
-        if modcount > 315 and modcount<2616:
-            rawAMarray = np.append(rawAMarray,object)
+        if modcount % 28 == 0:
+            if modcount > 315 and modcount<2616:
+                AMarray = np.append(AMarray,object)
         modcount = modcount + 1
-    for k in range(0,n):
-        rawcount = 0
-        sumAM = 0.0
-        for rawobject in rawAMarray:
-            if rawcount > 28*k and rawcount < 28*(k+1):
-                sumAM = sumAM + rawobject
-            rawcount = rawcount+1
-        sumAM = sumAM/28.0
-        AMarray = np.append(AMarray,sumAM)
     for j in range(0,n):
         #AMarray = AMarray[::-1]
         AM[i,j] = AMarray[j]/n
-print(AM)
+
 noise = np.random.normal(0,1,(n,n))
 #AM = AM +noise/100
 #TSVD method
@@ -109,7 +94,7 @@ yy = f2(xx)
 window = signal.gaussian(10, 20)
 smoothed = signal.convolve(yy, window/window.sum(), mode='same')
 plt.plot(xx/80,smoothed,linewidth=3.0,label='Gaussian smooth')
-#ax1.set_ylim(-0.1,1.7)
+ax1.set_ylim(-0.1,1.7)
 ax1.set_xlabel('Normalize position in CIGS layer',fontsize=15)
 ax1.set_ylabel('Charge collection probability',fontsize=15)
 ax1.xaxis.set_tick_params(labelsize=15)
