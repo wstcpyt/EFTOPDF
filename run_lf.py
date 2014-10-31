@@ -9,21 +9,26 @@ zmo=2300
 leff=920.0
 smooverd=4.3e-4
 def collectionfunction(z):
-    f = (2300.0-z)/2300.0
-    return f
+    numerator= iqescr*((np.cosh((z-zmo)/leff))/leff-smooverd*np.sinh((z-zmo)/leff))
+    denominator= np.cosh((zmo-350.0)/leff)/leff+smooverd*np.sinh((zmo-350.0)/leff)
+    iqevalue=numerator/denominator
+    return iqevalue
 #n=81 for pdf
 cc =  np.array([])
 for z in range(0,2300):
-    cc = np.append(cc,collectionfunction(z))
+    if z < 351:
+        cc = np.append(cc,1)
+    else:
+        cc = np.append(cc,collectionfunction(z))
 
 # calculate iqe vs waveklength
-wavelengthfile = open('wavelength_normal.txt')
+wavelengthfile = open('wavelength_normal_lf.txt')
 wl = np.array([])
 for line in wavelengthfile:
     wl = np.append(wl,float(line))
 iqewl = np.array([])
 for wlobject in wl:
-    file = open('pdf/%d_NORMAL_PDF.dat'%(wlobject))
+    file = open('pdf_lf/%d_NORMAL_PDF.dat'%(wlobject))
     gf = np.array([])
     gffoward = np.array([])
     for line in file:
@@ -44,12 +49,12 @@ fiqe = interp1d(xiqeextended, g,kind='cubic')
 iqexx = np.linspace(300,1100, 81)
 iqeyy = fiqe(iqexx)
 
-n = 81
+n = 21
 s = (n,n)
 #calculate the matrix
 AM = np.zeros(s)
 for i in range(0,n):
-    search = open('pdf/%d_NORMAL_PDF.dat'%(wl[i]))
+    search = open('pdf_lf/%d_NORMAL_PDF.dat'%(wl[i]))
     rawAMarray = np.array([])
     AMarray = np.array([])
     AMfoward = np.array([])
@@ -65,33 +70,34 @@ for i in range(0,n):
         rawcount = 0
         sumAM = 0.0
         for rawobject in rawAMarray:
-            if rawcount > 28*k and rawcount < 28*(k+1):
+            if rawcount > 109*k and rawcount < 109*(k+1):
                 sumAM = sumAM + rawobject
             rawcount = rawcount+1
-        sumAM = sumAM/28.0
+        sumAM = sumAM/109.0
         AMarray = np.append(AMarray,sumAM)
     for j in range(0,n):
         #AMarray = AMarray[::-1]
         AM[i,j] = AMarray[j]/n
-print(AM)
-
+#print(AM)
 noise = np.random.normal(0,1,(n,n))
 #AM = AM +noise/100
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(11,AM,g.T)
+f_tsvd = svdclass.f_tsvd(4,AM,g.T)
 f_tikhonov =svdclass.f_tikhonov(0.05,AM,g.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
+U, s, V = svdclass.svdmatrix(AM)
+print(s[0]/s[20])
 
 
 from pylab import *
-x= np.arange(0,81)
+x= np.arange(0,21)
 
 ax1 = subplot(111)
 #ax1.set_yscale('log')
 #ax.set_xscale('log')
-ax1.scatter (x/81.0,f_tsvd,marker='o',label='TSVD Regularization',color='black')
+ax1.scatter (x/21.0,f_tsvd,marker='o',label='TSVD Regularization',color='black')
 #ax1.scatter (x,iqeyy,marker='o',label='tkhonov',color='red')
 #ax1.scatter(x,f_tsvd,marker='o',label='tkhonov',color='green')
 ccx = np.arange(0,2300)
@@ -99,12 +105,12 @@ ax1.plot(ccx/2300.0,cc,label='Exact profiles',color='red',linewidth=3.0)
 
 #smoothcurce
 f2 = interp1d(x, f_tsvd)
-xx = np.linspace(0,80, 100)
+xx = np.linspace(0,20, 100)
 yy = f2(xx)
 # make a gaussian window
 window = signal.gaussian(10, 20)
 smoothed = signal.convolve(yy, window/window.sum(), mode='same')
-#plt.plot(xx/80,smoothed,linewidth=3.0,label='Gaussian smooth')
+#plt.plot(xx/20,smoothed,linewidth=3.0,label='Gaussian smooth')
 ax1.set_ylim(-0.1,1.7)
 ax1.set_xlabel('Normalize position in CIGS layer',fontsize=15)
 ax1.set_ylabel('Charge collection probability',fontsize=15)
