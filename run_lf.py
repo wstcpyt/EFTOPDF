@@ -1,8 +1,6 @@
 __author__ = 'yutongpang'
-import numpy as np
 from scipy.interpolate import interp1d
 from scipy import signal
-from scipy import interpolate
 from SVD import SVD
 iqescr=1
 zmo=2300
@@ -118,3 +116,4 @@ ax1.xaxis.set_tick_params(labelsize=15)
 ax1.yaxis.set_tick_params(labelsize=15)
 legend = ax1.legend(loc='upper right', shadow=True,prop={'size':15})
 show()
+
