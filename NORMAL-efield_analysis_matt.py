@@ -205,7 +205,8 @@ for para in parafile:
     i=0
     for field in df:
         if material(field[0],device) == 'CIGS':
-            n,k = nandk(material(field[0],device),wl) 
+            n,k = nandk(material(field[0],device),wl)
+            print(i)
             outdata[j]['active_gen_rate'][i]= array([field[0],absorption(field[1],n,k,photonenergy(wl))])
             i=i+1
 
