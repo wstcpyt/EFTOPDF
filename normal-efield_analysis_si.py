@@ -59,10 +59,9 @@ def get_internal(odata):
 
 #define CIGS structure
 dt = np.dtype([('material', np.str_, 16), ('position', np.float64, (2,))])
-device=np.array([('Si_doped',(1129.05,1128.05)),
-                 ('Si',(1128.05,628.05)),
-                 ('Ag',(628.05,627.95)),
-                 ('glass',(627.95,596.067))],dtype=dt)
+device=np.array([('Si_doped',(1130,1129)),
+                 ('Si',(1129,630)),
+                 ('Ag',(630,629.9))],dtype=dt)
 res=0.01 #resolution
 
 
@@ -90,14 +89,14 @@ def savedata(poutdata):
 #get normalized position in the active layer##########################
 def normalizepos(pos):
     js=list(device['material']).index('Si')
-    je=list(device['material']).index('glass')
+    je=list(device['material']).index('Ag')
     return((pos-device[js][1][1])/(device[je][1][0]-device[js][1][1]))
 #####################################################################
 
 #get normalized position in the active layer##########################
 def normalizefullpos(pos):
     js=list(device['material']).index('Si_doped')
-    je=list(device['material']).index('glass')
+    je=list(device['material']).index('Ag')
     return((pos-device[js][1][0])/(device[je][1][1]-device[js][1][0]))
 #####################################################################
 
@@ -108,8 +107,8 @@ parafile = np.genfromtxt(parafilename, delimiter='\t',invalid_raise=False,dtype=
 
 #define output data structure
 odt1 = np.dtype([('position', np.float64,1), ('abs_rate', np.float64,1)])                   #for reference not used
-gensize = np.absolute(np.round_((device[3]['position'][1]-device[0]['position'][0])/res)) #size of the generation array
-pdfsize = np.absolute(np.round_((device[3]['position'][0]-device[0]['position'][1])/res))   #size of the propability distribution array
+gensize = np.absolute(np.round_((device[2]['position'][1]-device[0]['position'][0])/res)) #size of the generation array
+pdfsize = np.absolute(np.round_((device[2]['position'][0]-device[0]['position'][1])/res))   #size of the propability distribution array
 outputdt = np.dtype([('wavelength', np.uint16,1),
                      ('mode',       np.str_,1),
                      ('mode_no',    np.uint8,1),
@@ -163,7 +162,7 @@ for para in parafile:
     outdata[j]['mode']= 'N'
     outdata[j]['mode_no']= 0
     print('Reading.. Si-EF-%dnm-Ex'%(wl))
-    df = np.genfromtxt('data_si/Si-EF-%dnm-Ex.txt'%(wl),delimiter='\t',invalid_raise=False) #DELETED THE GLASS REGION
+    df = np.genfromtxt('data_si/new-Si-EF-%dnm-Ex.txt'%(wl),delimiter='\t',skip_header=3992,invalid_raise=False) #DELETED THE GLASS REGION
     #exciton generation rate-total###################################
     i=0
     for field in df:
