@@ -16,7 +16,10 @@ for object in qearray:
     iqe = object[1]/(1-reflectionarray[i])
     iqedataarray = np.append(iqedataarray,iqe)
     i=i+1
-x = np.arange(300,1110,10)
+rxx = np.arange(300,1110,10)
+ryy = iqedataarray
+np.savetxt('x.txt',rxx)
+np.savetxt('y.txt',ryy)
 
 from pylab import *
 x = np.arange(300,1110,10)
