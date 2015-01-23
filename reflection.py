@@ -1,6 +1,6 @@
 __author__ = 'yutongpang'
 import numpy as np
-txtarray = np.genfromtxt('oc_si/Si-n.txt',delimiter='\t',invalid_raise=False)
+txtarray = np.genfromtxt('oc_si/asi-n.txt',delimiter='\t',invalid_raise=False)
 print(txtarray)
 reflectionarray = np.array([])
 for object in txtarray:
@@ -8,12 +8,19 @@ for object in txtarray:
     reflectionobject  = ((1-refractiveindex)/(1+refractiveindex))**2
     reflectionarray = np.append(reflectionarray,reflectionobject)
 
+fdtdref = np.genfromtxt('oc_si/reflection.txt',delimiter = '\t', invalid_raise=False)
+fdtdrefarray = np.array([])
+for object in fdtdref:
+    reflectionobject = object[1]
+    fdtdrefarray = np.append(fdtdrefarray,reflectionobject)
+
 qearray = np.genfromtxt('oc_si/si-qe.txt',delimiter='\t',invalid_raise=False)
+fdtdrefarray = np.genfromtxt('si_florida/RF.txt',delimiter='\t',invalid_raise=False)
 iqedataarray = np.array([])
 i=0
 for object in qearray:
     eqe = object[1]
-    iqe = object[1]/(1-reflectionarray[i])
+    iqe = object[1]/(1-fdtdrefarray[i]/100.0)
     iqedataarray = np.append(iqedataarray,iqe)
     i=i+1
 rxx = np.arange(300,1110,10)
