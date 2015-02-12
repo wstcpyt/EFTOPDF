@@ -22,7 +22,7 @@ for z in range(0,2300):
         cc = np.append(cc,collectionfunction(z))
 
 # calculate iqe vs waveklength
-wavelengthfile = open('wavelength_normal.txt')
+wavelengthfile = open('wavelength_normal_w.txt')
 wl = np.array([])
 for line in wavelengthfile:
     wl = np.append(wl,float(line))
@@ -49,7 +49,7 @@ fiqe = interp1d(xiqeextended, g,kind='cubic')
 iqexx = np.linspace(300,1100, 81)
 iqeyy = fiqe(iqexx)
 
-n = 81
+n = 17
 s = (n,n)
 #calculate the matrix
 AM = np.zeros(s)
@@ -70,10 +70,10 @@ for i in range(0,n):
         rawcount = 0
         sumAM = 0.0
         for rawobject in rawAMarray:
-            if rawcount > 28*k and rawcount < 28*(k+1):
+            if rawcount > 135*k and rawcount < 135*(k+1):
                 sumAM = sumAM + rawobject
             rawcount = rawcount+1
-        sumAM = sumAM/28.0
+        sumAM = sumAM/135.0
         AMarray = np.append(AMarray,sumAM)
     for j in range(0,n):
         #AMarray = AMarray[::-1]
@@ -84,18 +84,18 @@ print(AM)
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(5,AM,g.T)
+f_tsvd = svdclass.f_tsvd(3,AM,g.T)
 f_tikhonov =svdclass.f_tikhonov(0.05,AM,g.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
 U, s, V =svdclass.svdmatrix(AM)
 
 from pylab import *
-x= np.arange(0,81)
+x= np.arange(0,17)
 
 ax1 = subplot(111)
 #ax1.set_yscale('log')
 #ax.set_xscale('log')
-ax1.scatter (x/81.0,f_tsvd,marker='o',label='TSVD Regularization',color='black')
+ax1.scatter (x/17.0,f_tsvd,marker='o',label='TSVD Regularization',color='black')
 #ax1.scatter (x,s,marker='o',label=r"${\sigma _i}$",color='black')
 #ax1.scatter (x,abs(utb),marker='o',label='$ {u_i^TP}$',color='red')
 #ax1.scatter(x,abs(utbs),marker='o',label='${u_i^TP}/{\sigma _i}$',color='green')
@@ -104,7 +104,7 @@ ccx = np.arange(0,2300)
 
 #smoothcurce
 f2 = interp1d(x, f_tsvd)
-xx = np.linspace(0,80, 100)
+xx = np.linspace(0,17, 100)
 yy = f2(xx)
 # make a gaussian window
 window = signal.gaussian(10, 20)
