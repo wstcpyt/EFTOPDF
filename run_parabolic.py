@@ -47,31 +47,6 @@ n = 81
 s = (n,n)
 #calculate the matrix
 AM = np.zeros(s)
-for i in range(0,n):
-    search = open('pdf/%d_NORMAL_PDF.dat'%(wl[i]))
-    rawAMarray = np.array([])
-    AMarray = np.array([])
-    AMfoward = np.array([])
-    for line in search:
-        AMfoward = np.append(AMfoward,float(line.split()[1]))
-    AMreversed = AMfoward[::-1]
-    modcount = 0
-    for object in AMreversed:
-        if modcount > 315 and modcount<2616:
-            rawAMarray = np.append(rawAMarray,object)
-        modcount = modcount + 1
-    for k in range(0,n):
-        rawcount = 0
-        sumAM = 0.0
-        for rawobject in rawAMarray:
-            if rawcount > 28*k and rawcount < 28*(k+1):
-                sumAM = sumAM + rawobject
-            rawcount = rawcount+1
-        sumAM = sumAM/28.0
-        AMarray = np.append(AMarray,sumAM)
-    for j in range(0,n):
-        #AMarray = AMarray[::-1]
-        AM[i,j] = AMarray[j]/n
 print(AM)
 noise = np.random.normal(0,1,(n,n))
 #AM = AM +noise/100

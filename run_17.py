@@ -104,7 +104,7 @@ ccx = np.arange(0,2300)
 
 #smoothcurce
 f2 = interp1d(x, f_tsvd)
-xx = np.linspace(0,17, 100)
+xx = np.linspace(0,16, 100)
 yy = f2(xx)
 # make a gaussian window
 window = signal.gaussian(10, 20)
