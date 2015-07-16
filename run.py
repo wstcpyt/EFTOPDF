@@ -84,7 +84,7 @@ print(AM)
 #TSVD method
 svdclass=SVD(n)
 g = iqewl
-f_tsvd = svdclass.f_tsvd(5,AM,g.T)
+f_tsvd = svdclass.f_tsvd(17,AM,g.T)
 f_tikhonov =svdclass.f_tikhonov(0.05,AM,g.T)
 utb, utbs=svdclass.picardparameter(AM,g.T)
 U, s, V =svdclass.svdmatrix(AM)
@@ -93,12 +93,12 @@ from pylab import *
 x= np.arange(0,81)
 
 ax1 = subplot(111)
-#ax1.set_yscale('log')
+ax1.set_yscale('log')
 #ax.set_xscale('log')
-ax1.scatter (x/81.0,f_tsvd,marker='o',label='TSVD Regularization',color='black')
-#ax1.scatter (x,s,marker='o',label=r"${\sigma _i}$",color='black')
-#ax1.scatter (x,abs(utb),marker='o',label='$ {u_i^TP}$',color='red')
-#ax1.scatter(x,abs(utbs),marker='o',label='${u_i^TP}/{\sigma _i}$',color='green')
+#ax1.scatter (x/81.0,f_tsvd,marker='o',label='TSVD Regularization',color='black')
+ax1.scatter(x,s,marker=(3, 1),label=r"${\sigma _i}$",color='black')
+ax1.scatter(x,abs(utb),marker='*',label='$ {u_i^TP}$',color='red')
+ax1.scatter(x,abs(utbs),marker='o',label='${u_i^TP}/{\sigma _i}$',color='green')
 ccx = np.arange(0,2300)
 #ax1.plot(ccx/2300.0,cc,label='Exact profiles',color='red',linewidth=3.0)
 
