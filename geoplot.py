@@ -6,9 +6,9 @@ d = 0.25
 
 optimumarray = np.array([])
 
-for loop in range(21, 41):
+for loop in range(0, 1):
     s = (size, size)
-    derror = d + d/loop
+    #derror = d + d/loop
 
     #########################################
     AM = np.zeros(s)
@@ -34,7 +34,7 @@ for loop in range(21, 41):
         for j in range(0, size):
             s = 1.0/size * (j + 0.5)
             t = 1.0/size * (i + 0.5)
-            AM[i][j] = 1.0/size * derror/pow(pow(derror, 2.0) + pow(s-t, 2.0), 1.5)
+            AM[i][j] = 1.0/size * 0.27/pow(pow(0.25, 2.0) + pow(s-t, 2.0), 1.5)
 
     from SVD import SVD
     svd = SVD(size)
@@ -60,5 +60,5 @@ x= np.arange(0,20)
 
 ax1 = subplot(111)
 #ax.set_xscale('log')
-ax1.scatter (x/20.0,optimumarray,marker='o',label='TSVD Regularization',color='black')
+ax1.scatter (x/20.0,f_tikhonov,marker='o',label='TSVD Regularization',color='black')
 show()

@@ -42,7 +42,7 @@ class Geo:
         fvalue = 0.0
         for f_tikobj in f_tikhonov:
             fvalue += f_tikobj * f_tikobj
-        return fvalue
+        return np.std(f_tikhonov, dtype=np.float64)/np.mean(f_tikhonov)
 
 
 
@@ -52,7 +52,7 @@ def get1dplot():
     ax1.set_yscale('log')
     lambsweep = np.array([10 ,1 , 0.1, 0.0001, 0.0000001])
     for lambobj in lambsweep:
-        sweep = np.arange(50, 270, 1)/1000.0
+        sweep = np.arange(50, 300, 1)/1000.0
         #print(sweep)
         plotsubarray = np.array([])
         for obj in sweep:
@@ -62,11 +62,11 @@ def get1dplot():
         ax1.plot (sweep,plotsubarray,label=str(lambobj))
 
     legend = ax1.legend(loc='upper left', shadow=True,prop={'size':15})
-    #show()
+    show()
 
 def get2dplot():
-    d1 = np.arange(230, 260, 1)/1000.0
-    d2 = np.arange(230, 260, 1)/1000.0
+    d1 = np.arange(245, 255, 1)/1000.0
+    d2 = np.arange(245, 255, 1)/1000.0
     colormap = np.zeros((len(d1), len(d1)))
     for i in range(0, len(d1)):
         for j in range(0, len(d2)):
