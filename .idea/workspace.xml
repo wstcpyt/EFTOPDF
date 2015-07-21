@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e78adcf1-e7bb-4d5a-8394-d5c8444f8c6e" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LCurve.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tikhonovleastsquare.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geoexample.py" afterPath="$PROJECT_DIR$/geoexample.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geoplot.py" afterPath="$PROJECT_DIR$/geoplot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ven27/bin/pyquante.log" afterPath="$PROJECT_DIR$/ven27/bin/pyquante.log" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EFTOPDF.iws" />
@@ -24,9 +30,15 @@
     <SUITE FILE_PATH="coverage/EFTOPDF$run_cigs_dipplationregeion.coverage" NAME="run_cigs_dipplationregeion Coverage Results" MODIFIED="1437002577130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EFTOPDF$run_17.coverage" NAME="run_17 Coverage Results" MODIFIED="1431695923377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EFTOPDF$run_CIGS.coverage" NAME="run_CIGS Coverage Results" MODIFIED="1432324756061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/EFTOPDF$geoexample.coverage" NAME="geoexample Coverage Results" MODIFIED="1437450109770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EFTOPDF$geoplot.coverage" NAME="geoplot Coverage Results" MODIFIED="1437447993594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EFTOPDF$geneticalgorithm.coverage" NAME="geneticalgorithm Coverage Results" MODIFIED="1437050637558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/EFTOPDF$geoplot.coverage" NAME="geoplot Coverage Results" MODIFIED="1437062870569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EFTOPDF$geoexample.coverage" NAME="geoexample Coverage Results" MODIFIED="1437013992159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EFTOPDF$geneticalgorithm.coverage" NAME="geneticalgorithm Coverage Results" MODIFIED="1437062812620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
     <SUITE FILE_PATH="coverage/EFTOPDF$run.coverage" NAME="run Coverage Results" MODIFIED="1432324378231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EFTOPDF$tikhonovleastsquare.coverage" NAME="tikhonovleastsquare Coverage Results" MODIFIED="1437453516043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EFTOPDF$run_linear.coverage" NAME="run_linear Coverage Results" MODIFIED="1431696620719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -63,6 +75,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="run_CIGS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_CIGS.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,6 +91,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="55" selection-end-column="35" />
+=======
+      <file leaf-file-name="geoexample.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geoexample.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
               <folding>
                 <element signature="e#26#44#0" expanded="true" />
               </folding>
@@ -85,6 +105,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="tikhonovleastsquare.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tikhonovleastsquare.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,6 +134,16 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
               <folding />
+=======
+      <file leaf-file-name="geneticalgorithm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geneticalgorithm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
             </state>
           </provider>
         </entry>
@@ -127,11 +158,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="geoplot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="geoplot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/geoplot.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+=======
+            <state vertical-scroll-proportion="0.5">
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
               <folding>
                 <element signature="e#26#44#0" expanded="true" />
               </folding>
@@ -170,12 +206,15 @@
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/run_CIGS.py" />
         <option value="$PROJECT_DIR$/run_cigs_dipplationregeion.py" />
-        <option value="$PROJECT_DIR$/geoplot.py" />
-        <option value="$PROJECT_DIR$/geneticalgorithm.py" />
         <option value="$PROJECT_DIR$/geoexample.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/LCurve.py" />
         <option value="$PROJECT_DIR$/tikhonovleastsquare.py" />
+=======
+        <option value="$PROJECT_DIR$/geneticalgorithm.py" />
+        <option value="$PROJECT_DIR$/geoplot.py" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
       </list>
     </option>
   </component>
@@ -187,10 +226,17 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="467" />
     <option name="y" value="166" />
     <option name="width" value="2046" />
     <option name="height" value="1160" />
+=======
+    <option name="x" value="134" />
+    <option name="y" value="214" />
+    <option name="width" value="1440" />
+    <option name="height" value="797" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -215,7 +261,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,6 +281,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -247,10 +293,18 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="LayoutCode.rearrangeEntriesPython" value="true" />
+<<<<<<< HEAD
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Python.tikhonovleastsquare">
     <configuration default="false" name="geoexample" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Python.geoplot">
+    <configuration default="false" name="run_CIGS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -540,8 +594,13 @@
     </list>
     <recent_temporary>
       <list size="5">
+<<<<<<< HEAD
         <item index="0" class="java.lang.String" itemvalue="Python.tikhonovleastsquare" />
         <item index="1" class="java.lang.String" itemvalue="Python.LCurve" />
+=======
+        <item index="0" class="java.lang.String" itemvalue="Python.geoplot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.geneticalgorithm" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
         <item index="2" class="java.lang.String" itemvalue="Python.geoexample" />
         <item index="3" class="java.lang.String" itemvalue="Python.geoplot" />
         <item index="4" class="java.lang.String" itemvalue="Python.geneticalgorithm" />
@@ -562,18 +621,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="467" y="166" width="2046" height="1160" extended-state="0" />
+=======
+    <frame x="134" y="214" width="1440" height="797" extended-state="0" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897195" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2749501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39906543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990655" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32990655" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36266094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39981273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990655" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45120227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -933,6 +1003,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17466411">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -949,6 +1020,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
           <folding />
+=======
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
         </state>
       </provider>
     </entry>
@@ -960,6 +1033,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/geneticalgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6865022">
@@ -979,6 +1053,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
+=======
+    <entry file="file://$PROJECT_DIR$/run_CIGS.py">
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="102" column="73" selection-start-line="102" selection-start-column="73" selection-end-line="102" selection-end-column="73" />
@@ -986,16 +1063,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geoplot.py">
+    <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+=======
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="68" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
           <folding>
             <element signature="e#26#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/run_m.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1008,6 +1090,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="55" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/run_cigs_dipplationregeion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7657082">
+          <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geoexample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
           <folding>
             <element signature="e#26#44#0" expanded="true" />
           </folding>
@@ -1016,18 +1112,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/geoexample.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.66012084">
           <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
           <folding>
             <element signature="e#26#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/tikhonovleastsquare.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69521046">
           <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+=======
+    <entry file="file://$PROJECT_DIR$/geoplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+>>>>>>> bd1141b04057db55638170abd5ce5c31aa1d17fb
           <folding>
             <element signature="e#26#44#0" expanded="true" />
           </folding>
