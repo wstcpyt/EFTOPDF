@@ -82,8 +82,11 @@ class SVD():
         f_tikhonov=0
         utb, utbs =self.picardparameter(AM,g)
         U,s,V=self.svdmatrix(AM)
+        phiarray = np.array([])
         for i in range(0,n):
+            phiarray = np.append(phiarray, s[i]**2/(s[i]**2+lam**2))
             f_tikhonov=f_tikhonov+s[i]**2/(s[i]**2+lam**2)*utbs[i]*V[i]
+        self.phi = phiarray
         return f_tikhonov
 
 
