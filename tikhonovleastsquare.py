@@ -54,11 +54,11 @@ class Geo:
         return xarray
 
     def gettikhonov_x(self):
-            from SVD import SVD
-            svd = SVD(size)
-            f_tikhonov = svd.f_tikhonov(self.lam, self.AM, self.b.T)
-            self.phi = svd.phi
-            return f_tikhonov
+        from SVD import SVD
+        svd = SVD(size)
+        f_tikhonov = svd.f_tikhonov(self.lam, self.AM, self.b.T)
+        self.phi = svd.phi
+        return f_tikhonov
 
 
 
@@ -107,56 +107,50 @@ class GSV:
             sumphi += self.phi[i]
 
         divisor = (arraysize - sumphi)**2
+        print(divisor)
         self.Gvalue = dividend/divisor
 
 
 
 
 if __name__ == '__main__':
-        # ro = np.array([])
-        # yita = np.array([])
-        # cvalue = np.array([])
-        # lambsweep = np.arange(0.0001, 0.1, 0.0001)
-        # for lambobj in lambsweep:
-        #     print(lambobj)
-        #     geo = Geo(0.25, 0.265, lambobj)
-        #     f_tikhonov_X = geo.gettikhonov_x()
-        #     bdifference = np.dot(geo.AM, f_tikhonov_X) - geo.b
-        #     from SVD import SVD
-        #     svd1 = SVD(size)
-        #     f_tikhonov_Z = svd1.f_tikhonov(lambobj, geo.AM, bdifference)
-        #     curvature = Curvature(geo.AM, f_tikhonov_X, f_tikhonov_Z, geo.b, lambobj)
-        #     curvature.calculatecValue()
-        #     cvalue = np.append(cvalue, curvature.cValue+1E-5)
-        #     yita = np.append(yita, curvature.yita)
-        #     ro = np.append(ro, curvature.ro)
-        lambsweep = np.arange(0.000001, 0.001, 0.00001)
-        bsweep = np.arange(-0.2, 0.2, 0.05)
-        bsweepsize = len(bsweep)
-        minimumarray = np.zeros((bsweepsize, bsweepsize))
-        for i in range(0, bsweepsize):
-            print(i)
-            for j in range(0, bsweepsize):
-                print(j)
-                Garray = np.array([])
-                for lambsweepobj in lambsweep:
-                    geo = Geo(0.25, 0.25, lambsweepobj)
-                    geo.b[0] = geo.b[0] + bsweep[i]
-                    geo.b[1] = geo.b[1] + bsweep[j]
-                    tikhonov_x = geo.gettikhonov_x()
-                    leastsquare_x = geo.getleastsquarex()
-                    gsv = GSV(geo.AM, leastsquare_x, geo.b, geo.phi)
-                    gsv.calculateGvalue()
-                    Garray = np.append(Garray, gsv.Gvalue)
-                minumumvalue = np.amin(Garray)
-                minimumarray[i][j] = minumumvalue
+    # ro = np.array([])
+    # yita = np.array([])
+    # cvalue = np.array([])
+    # lambsweep = np.arange(0.0001, 0.1, 0.0001)
+    # for lambobj in lambsweep:
+    #     print(lambobj)
+    #     geo = Geo(0.25, 0.265, lambobj)
+    #     f_tikhonov_X = geo.gettikhonov_x()
+    #     bdifference = np.dot(geo.AM, f_tikhonov_X) - geo.b
+    #     from SVD import SVD
+    #     svd1 = SVD(size)
+    #     f_tikhonov_Z = svd1.f_tikhonov(lambobj, geo.AM, bdifference)
+    #     curvature = Curvature(geo.AM, f_tikhonov_X, f_tikhonov_Z, geo.b, lambobj)
+    #     curvature.calculatecValue()
+    #     cvalue = np.append(cvalue, curvature.cValue+1E-5)
+    #     yita = np.append(yita, curvature.yita)
+    #     ro = np.append(ro, curvature.ro)
+    lambsweep = np.arange(1E-12, 1E-10, 1E-11)
+    bsweep = np.arange(-0.2, 0.2, 0.05)
+    Garray = np.array([])
+    for lambsweepobj in lambsweep:
+        geo = Geo(0.25, 0.25, lambsweepobj)
+        geo.b[0] = geo.b[0]
+        geo.b[1] = geo.b[1]
+        tikhonov_x = geo.gettikhonov_x()
+        leastsquare_x = geo.getleastsquarex()
+        gsv = GSV(geo.AM, tikhonov_x, geo.b, geo.phi)
+        gsv.calculateGvalue()
+        Garray = np.append(Garray, gsv.Gvalue)
+    minumumvalue = np.amin(Garray)
 
-        print(minimumarray)
-        from pylab import *
-        ax1 = subplot(111)
-        x= np.arange(40)
-        ax1.set_yscale('log')
-        ax1.set_xscale('log')
-        #ax1.scatter (lambsweep,Garray,marker='o',label='TSVD Regularization',color='black')
-        #ax1.scatter(x,s,marker=(3, 1),label=r"${\sigma _i}$",color='black')
-        #show()
+    print(minumumvalue)
+    from pylab import *
+    ax1 = subplot(111)
+    x= np.arange(40)
+    #ax1.set_yscale('log')
+    #ax1.set_xscale('log')
+    ax1.scatter (x,tikhonov_x,marker='o',label='TSVD Regularization',color='black')
+    #ax1.scatter(x,s,marker=(3, 1),label=r"${\sigma _i}$",color='black')
+    show()
